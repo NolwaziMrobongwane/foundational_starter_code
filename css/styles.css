@@ -1,66 +1,229 @@
-/* Basic styles with errors and omissions */
+/* 1. Element selector */
 
 body {
-    font-family: Arial;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    line-height: 1.6;
+
+    color: #1a202c;
+
+    background-color: #f7fafc;
+
     margin: 0;
+
     padding: 0;
-    color: #333;
+
 }
 
-.header {
-    background-color: #222;
-    color: white;
-    padding: 20px;
-    /* Missing: proper alignment */
-}
 
-.header h1 {
-    margin: 0;
-}
 
-/* Navigation styling missing completely */
+/* 2. Class selector */
 
 .hero {
-    padding: 50px;
-    background-color: lightblue;
-    /* Poor colour contrast */
+
+    padding: 40px 20px;
+
+    margin: 20px auto;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    max-width: 900px;
+
 }
 
-.hero h2 {
-    font-size: 36px;
+
+
+/* 3. ID selector - requirement */
+
+#contactForm {
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    background-color: #ffffff;
+
+    border: 2px solid #cbd5e0;
+
+    border-radius: 8px;
+
 }
 
-.hero img {
-    width: 100%;
-    /* Missing: alt text handled in HTML, but sizing issues here */
+
+
+/* 4. Descendant selector - requirement */
+
+header nav ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 20px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
 }
 
-/* Missing: Only using 2-3 selector types, need 5+ */
-/* Missing: Pseudo-classes not used */
-/* Missing: Combination selectors not used */
 
-.intro {
-    padding: 30px;
+
+/* 5. Grouping selector */
+
+h1, h2, h3 {
+
+    color: #2d3748;
+
+    margin-bottom: 15px;
+
 }
 
-/* Form styling incomplete */
-form input {
-    display: block;
-    margin: 10px 0;
-}
 
-/* Missing: Box model demonstration (margin, padding, border) */
-/* Missing: Block vs inline elements styling */
-/* Missing: Text and colour styling variety */
-/* Missing: Table styling */
 
-.footer {
-    background-color: gray;
-    color: white;
+header {
+
+    background-color: #2d3748;
+
+    color: #ffffff;
+
     padding: 20px;
-    /* Wrong alignment */
-    text-align: left;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    border-bottom: 4px solid #3182ce;
+
 }
 
-/* Code quality issues: inconsistent spacing, poor naming, no comments */
 
+
+header h1 { color: #ffffff; margin: 0; }
+
+
+
+/* Navigation - FIXES your "Navigation styling missing" */
+
+.nav-list li a {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background-color: #3182ce;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    border: 1px solid #2b6cb0;
+
+    transition: background-color 0.3s ease;
+
+}
+
+
+
+.nav-list li a:hover { background-color: #2b6cb0; color: #ffffff; }
+
+.nav-list li a:focus { outline: 3px solid #f6ad55; outline-offset: 2px; }
+
+.nav-list li a.active { background-color: #1a365d; font-weight: bold; }
+
+
+
+.intro, .about-content, .skills-section, .projects-grid, .contact-form-section {
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border: 1px solid #e2e8f0;
+
+    max-width: 900px;
+
+    background-color: #ffffff;
+
+    border-radius: 8px;
+
+}
+
+
+
+/* Table styling - FIXES missing table styles */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 20px 0;
+
+    border: 2px solid #2d3748;
+
+}
+
+thead { background-color: #2d3748; color: #ffffff; }
+
+th, td { padding: 12px 15px; border: 1px solid #cbd5e0; text-align: left; }
+
+tbody tr:nth-child(even) { background-color: #edf2f7; }
+
+tbody tr:nth-child(odd) { background-color: #ffffff; }
+
+tbody tr:hover { background-color: #e2e8f0; }
+
+
+
+/* Form styling */
+
+label { display: block; margin-top: 15px; margin-bottom: 5px; font-weight: bold; }
+
+.inline-label { display: inline; font-weight: normal; margin-right: 15px; }
+
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+
+    width: 100%; padding: 10px; margin-bottom: 10px;
+
+    border: 1px solid #a0aec0; border-radius: 4px;
+
+}
+
+input:focus, select:focus, textarea:focus { border-color: #3182ce; outline: 2px solid #90cdf4; }
+
+button, .btn {
+
+    display: inline-block; padding: 12px 25px; margin-top: 15px;
+
+    background-color: #3182ce; color: #ffffff;
+
+    border: 2px solid #2b6cb0; border-radius: 5px; cursor: pointer; text-decoration: none;
+
+    transition: all 0.3s ease;
+
+}
+
+button:hover, .btn:hover { background-color: #2b6cb0; transform: translateY(-2px); }
+
+img { max-width: 100%; height: auto; border-radius: 5px; margin: 15px 0; border: 1px solid #e2e8f0; }
+
+.profile-img { border: 3px solid #3182ce; border-radius: 50%; }
+
+footer { text-align: center; padding: 20px; margin-top: 40px; background-color: #2d3748; color: #ffffff; border-top: 4px solid #3182ce; }
+
+.project-card { padding: 20px; margin: 20px 0; border: 1px solid #e2e8f0; border-radius: 8px; background-color: #ffffff; }
