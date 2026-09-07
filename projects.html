@@ -1,30 +1,93 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
-    <title>Projects</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Projects portfolio page">
+
+    <title>Projects - My Portfolio</title>
+
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
-    <div class="header">
+
+    <header>
+
         <h1>My Projects</h1>
-    </div>
-    
-    <div>
-        <h2>Project 1</h2>
-        <img src="images/project1.jpg">
-        <p>A responsive website built with HTML and CSS.</p>
-    </div>
-    
-    <div>
-        <h2>Project 2</h2>
-        <img src="images/project2.jpg">
-        <p>An e-commerce site with modern design.</p>
-    </div>
-    
-    <!-- Third project missing -->
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
+
+        <nav>
+
+            <ul class="nav-list">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="projects.html" class="active">Projects</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="projects-grid">
+
+            <h2>Featured Work</h2>
+
+            <article class="project-card">
+
+                <h3>Portfolio Website</h3>
+
+                <img src="images/project1.jpg" alt="Portfolio website project screenshot showing clean layout with navigation" width="400" height="250">
+
+                <p>A fully responsive portfolio built with semantic HTML5 and CSS3.</p>
+
+                <a href="#" class="btn">View Project</a>
+
+            </article>
+
+            <article class="project-card">
+
+                <h3>Small Business Landing Page</h3>
+
+                <img src="images/project2.jpg" alt="Small business landing page design for local coffee shop" width="400" height="250">
+
+                <p>Designed and coded landing page for local client, focused on mobile-first.</p>
+
+                <a href="#" class="btn">View Project</a>
+
+            </article>
+
+            <article class="project-card">
+
+                <h3>Accessibility Audit Tool</h3>
+
+                <img src="images/project3.jpg" alt="Accessibility audit report showing contrast checks" width="400" height="250">
+
+                <p>Tool that checks colour contrast and semantic structure.</p>
+
+                <a href="#" class="btn">View Project</a>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer><p>&copy; 2025 Nolwazi Mrobongwane. All rights reserved.</p></footer>
+
 </body>
+
 </html>
